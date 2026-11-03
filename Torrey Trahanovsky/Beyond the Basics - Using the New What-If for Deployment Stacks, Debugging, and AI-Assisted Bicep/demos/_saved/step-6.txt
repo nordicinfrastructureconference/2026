@@ -1,0 +1,41 @@
+Resource Id: /subscriptions/00000000-0000-0000-0000-000000000000/resourc
+eGroups/rg-demo-nic2026-stacks/providers/Microsoft.Resources/deploymentS
+tacksWhatIfResults/whatif-delete
+Name: whatif-delete
+Provisioning State: succeeded
+Stack Resource Id: /subscriptions/00000000-0000-0000-0000-000000000000/r
+esourceGroups/rg-demo-nic2026-stacks/providers/Microsoft.Resources/deplo
+ymentStacks/stack-app
+Correlation Id: 00000000-0000-0000-0000-000000000000
+Creation Time: 2026-10-13T12:22:35.2042552Z
+Expiration Time: 2026-10-13T13:22:35.2042552Z
+
+Resource and property changes are indicated with these symbols:
+  + Create              ! Unsupported
+  ~ Modify              - Delete
+  = NoChange            v Detach
+
+Changes to Managed Resources:
+
+Azure
+  = /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/r
+g-demo-nic2026-stacks/providers/Microsoft.Network/networkSecurityGroups/
+nsg-app [2024-05-01]
+  = Management Status: "managed"
+  = Deny Status: "denyDelete"
+  - /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/r
+g-demo-nic2026-stacks/providers/Microsoft.Network/virtualNetworks/vnet-a
+pp
+  ~ Management Status: "managed" => "notManaged"
+  ~ Deny Status: "denyDelete" => "none"
+  = /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/r
+g-demo-nic2026-stacks/providers/Microsoft.Storage/storageAccounts/stappb
+5plrxcdyi6my [2023-05-01]
+  = Management Status: "managed"
+  = Deny Status: "denyDelete"
+Deleting - Resources Marked for Deletion 1 total:
+
+Azure
+  - /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/r
+g-demo-nic2026-stacks/providers/Microsoft.Network/virtualNetworks/vnet-a
+pp

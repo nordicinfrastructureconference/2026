@@ -1,0 +1,4 @@
+Name          Type
+----          ----
+whatif-sku    Microsoft.Resources/deploymentStacksWhatIfResults
+whatif-delete Microsoft.Resources/deploymentStacksWhatIfResults

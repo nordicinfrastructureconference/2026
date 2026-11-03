@@ -1,0 +1,71 @@
+name: Deploy brownfield
+
+on:
+  push:
+    branches: [main]
+    paths: ['brownfield/**']
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      RESOURCE_GROUP: rg-demo-nic2026-brownfield
+      STACK_NAME: stack-brownfield
+      TEMPLATE_FILE: brownfield/main.bicep
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Stacks What-If
+        uses: azure/powershell@v2
+        with:
+          azPSVersion: latest
+          inlineScript: |
+            $ErrorActionPreference = 'Stop'
+            $subscriptionId = (Get-AzContext).Subscription.Id
+            $stackId = "/subscriptions/$subscriptionId/resourceGroups/$env:RESOURCE_GROUP/providers/Microsoft.Resources/deploymentStacks/$env:STACK_NAME"
+            $stack = @{
+              ResourceGroupName = $env:RESOURCE_GROUP
+              TemplateFile = $env:TEMPLATE_FILE
+              ActionOnUnmanage = 'DetachAll'
+              DenySettingsMode = 'None'
+            }
+
+            $result = New-AzResourceGroupDeploymentStackWhatIfResult @stack `
+              -Name "ci-${{ github.run_id }}-${{ github.run_attempt }}" `
+              -StackResourceId $stackId `
+              -RetentionInterval PT1H `
+              -Force
+
+            $risky = @(
+              $result.Properties.Changes.ResourceChanges |
+                Where-Object ChangeType -in 'delete', 'detach'
+            )
+            if ($risky) {
+              $risky | ForEach-Object { Write-Error "$($_.ChangeType): $($_.Id)" }
+              throw 'Stacks What-If found resources that would be deleted or detached. Review them before deploying.'
+            }
+
+      - name: Deploy stack
+        uses: azure/powershell@v2
+        with:
+          azPSVersion: latest
+          inlineScript: |
+            $ErrorActionPreference = 'Stop'
+            New-AzResourceGroupDeploymentStack `
+              -Name $env:STACK_NAME `
+              -ResourceGroupName $env:RESOURCE_GROUP `
+              -TemplateFile $env:TEMPLATE_FILE `
+              -ActionOnUnmanage DetachAll `
+              -DenySettingsMode None `
+              -Force

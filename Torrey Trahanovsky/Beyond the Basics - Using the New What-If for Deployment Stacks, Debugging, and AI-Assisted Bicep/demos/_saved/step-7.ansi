@@ -1,0 +1,29 @@
+
+[32;1mId                            : [0m/subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Resources/
+                                deploymentStacks/stack-app
+[32;1mName                          : [0mstack-app
+[32;1mProvisioningState             : [0msucceeded
+[32;1mresourcesCleanupAction        : [0mdelete
+[32;1mresourceGroupsCleanupAction   : [0mdetach
+[32;1mmanagementGroupsCleanupAction : [0mdetach
+[32;1mCorrelationId                 : [0m00000000-0000-0000-0000-000000000000
+[32;1mDenySettingsMode              : [0mdenyDelete
+[32;1mCreationTime(UTC)             : [0m10/13/2026 12:21:18 PM
+[32;1mDeploymentId                  : [0m/subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Resources/
+                                deployments/stack-app-261013126tsgn
+[32;1mResources                     : [0m/subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Network/ne
+                                tworkSecurityGroups/nsg-app
+                                /subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Storage/st
+                                orageAccounts/stappb5plrxcdyi6my
+[32;1mDeletedResources              : [0m/subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Network/vi
+                                rtualNetworks/vnet-app

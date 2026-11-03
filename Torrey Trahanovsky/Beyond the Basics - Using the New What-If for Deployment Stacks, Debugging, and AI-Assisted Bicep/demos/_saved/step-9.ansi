@@ -1,0 +1,5 @@
+
+[32;1mName         [0m[32;1m Type[0m
+[32;1m----         [0m [32;1m----[0m
+whatif-sku    Microsoft.Resources/deploymentStacksWhatIfResults
+whatif-delete Microsoft.Resources/deploymentStacksWhatIfResults

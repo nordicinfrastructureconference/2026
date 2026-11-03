@@ -1,0 +1,24 @@
+Note: The result may contain false positive predictions (noise).
+You can help us improve the accuracy of the result by opening an issue here: https://aka.ms/WhatIfIssues.
+NOTICE! - Want to get What-if without noise? Move to Deployment Stacks What-If https://aka.ms/stackswhatifGA
+
+Resource and property changes are indicated with these symbols:
+  - Delete
+  ~ Modify
+
+The deployment will update the following scope:
+
+Scope: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-demo-nic2026-stacks
+
+  ~ Microsoft.Network/networkSecurityGroups/nsg-app [2024-05-01]
+    - tags.myTag: "myValue"
+
+  ~ Microsoft.Network/virtualNetworks/vnet-app [2024-05-01]
+    - properties.privateEndpointVNetPolicies: "Disabled"
+    - tags.myTag:                             "myValue"
+
+  ~ Microsoft.Storage/storageAccounts/stappb5plrxcdyi6my [2023-05-01]
+    - tags.myTag: "myValue"
+    ~ sku.name:   "Standard_LRS" => "Standard_GRS"
+
+Resource changes: 3 to modify.
