@@ -1,0 +1,34 @@
+
+Resource Id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-demo-nic2026-brownfield/providers/Microsoft.Resources/deploymentStacksWhatIfResults/stack-brownfield-preview
+Name: stack-brownfield-preview
+Provisioning State: succeeded
+Stack Resource Id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-demo-nic2026-brownfield/providers/Microsoft.Resources/deploymentStacks/stack-brownfield
+Correlation Id: 00000000-0000-0000-0000-000000000000
+Creation Time: 2026-10-08T04:29:00.9637677Z
+Expiration Time: 2026-10-08T05:29:00.9637677Z
+
+Resource and property changes are indicated with these symbols:
+  + Create              ! Unsupported        
+  ~ Modify              - Delete             
+  = NoChange            v Detach             
+
+Changes to Stack /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-demo-nic2026-brownfield/providers/Microsoft.Resources/deploymentStacks/stack-brownfield:
++ DenySettings.Mode: "None"
++ DenySettings.ApplyToChildScopes: "False"
+
+Changes to Managed Resources:
+
+Azure
+  = /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-demo-nic2026-brownfield/providers/Microsoft.Network/networkSecurityGroups/nsg-legacy [2025-07-01]
+  ~ Management Status: "notManaged" => "managed"
+  = Deny Status: "none"
+  = /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-demo-nic2026-brownfield/providers/Microsoft.Network/virtualNetworks/vnet-legacy [2025-07-01]
+  ~ Management Status: "notManaged" => "managed"
+  = Deny Status: "none"
+  = /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-demo-nic2026-brownfield/providers/Microsoft.Storage/storageAccounts/stlegacyann4ujmzac [2026-04-01]
+  ~ Management Status: "notManaged" => "managed"
+  = Deny Status: "none"
+
+
+
+

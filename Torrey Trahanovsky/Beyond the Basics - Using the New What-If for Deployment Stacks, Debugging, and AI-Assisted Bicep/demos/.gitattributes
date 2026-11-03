@@ -1,0 +1,4 @@
+* text=auto
+# Saved terminal output with color codes: keep it byte for byte.
+*.ansi -text
+*.cmd text eol=crlf

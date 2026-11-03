@@ -1,0 +1,28 @@
+Id                            : /subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Resources/
+                                deploymentStacks/stack-app
+Name                          : stack-app
+ProvisioningState             : succeeded
+resourcesCleanupAction        : delete
+resourceGroupsCleanupAction   : detach
+managementGroupsCleanupAction : detach
+CorrelationId                 : 00000000-0000-0000-0000-000000000000
+DenySettingsMode              : denyDelete
+CreationTime(UTC)             : 10/13/2026 12:21:18 PM
+DeploymentId                  : /subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Resources/
+                                deployments/stack-app-261013126tsgn
+Resources                     : /subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Network/ne
+                                tworkSecurityGroups/nsg-app
+                                /subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Storage/st
+                                orageAccounts/stappb5plrxcdyi6my
+DeletedResources              : /subscriptions/00000000-0000-0000-0000-0
+                                00000000000/resourceGroups/rg-demo-nic20
+                                26-stacks/providers/Microsoft.Network/vi
+                                rtualNetworks/vnet-app

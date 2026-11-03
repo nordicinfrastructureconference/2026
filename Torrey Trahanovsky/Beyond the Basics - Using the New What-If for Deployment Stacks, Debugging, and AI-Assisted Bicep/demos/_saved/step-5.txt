@@ -1,0 +1,36 @@
+Resource Id: /subscriptions/00000000-0000-0000-0000-000000000000/resourc
+eGroups/rg-demo-nic2026-stacks/providers/Microsoft.Resources/deploymentS
+tacksWhatIfResults/whatif-sku
+Name: whatif-sku
+Provisioning State: succeeded
+Stack Resource Id: /subscriptions/00000000-0000-0000-0000-000000000000/r
+esourceGroups/rg-demo-nic2026-stacks/providers/Microsoft.Resources/deplo
+ymentStacks/stack-app
+Correlation Id: 00000000-0000-0000-0000-000000000000
+Creation Time: 2026-10-13T12:22:07.1769715Z
+Expiration Time: 2026-10-13T13:22:07.1769715Z
+
+Resource and property changes are indicated with these symbols:
+  + Create              ! Unsupported
+  ~ Modify              - Delete
+  = NoChange            v Detach
+
+Changes to Managed Resources:
+
+Azure
+  = /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/r
+g-demo-nic2026-stacks/providers/Microsoft.Network/networkSecurityGroups/
+nsg-app [2024-05-01]
+  = Management Status: "managed"
+  = Deny Status: "denyDelete"
+  = /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/r
+g-demo-nic2026-stacks/providers/Microsoft.Network/virtualNetworks/vnet-a
+pp [2024-05-01]
+  = Management Status: "managed"
+  = Deny Status: "denyDelete"
+  ~ /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/r
+g-demo-nic2026-stacks/providers/Microsoft.Storage/storageAccounts/stappb
+5plrxcdyi6my [2023-05-01]
+  = Management Status: "managed"
+  = Deny Status: "denyDelete"
+  ~ sku.name: "Standard_LRS" => "Standard_GRS"

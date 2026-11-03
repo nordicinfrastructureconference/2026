@@ -1,0 +1,25 @@
+Getting the latest status of all resources...                                             What if:         
+Note: The result may contain false positive predictions (noise).
+You can help us improve the accuracy of the result by opening an issue here: https://aka.ms/WhatIfIssues.
+NOTICE! - Want to get What-if without noise? Move to Deployment Stacks What-If https://aka.ms/stackswhatifGA
+
+Resource and property changes are indicated with these symbols:
+  [38;5;208m-[0m Delete
+  [38;5;141m~[0m Modify
+
+The deployment will update the following scope:
+
+Scope: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-demo-nic2026-stacks
+[38;5;141m
+  ~ Microsoft.Network/networkSecurityGroups/nsg-app[0m [2024-05-01][38;5;141m[0m
+    [38;5;208m-[0m tags.myTag[0m:[0m [38;5;208m"myValue"[0m
+[38;5;141m
+  ~ Microsoft.Network/virtualNetworks/vnet-app[0m [2024-05-01][38;5;141m[0m
+    [38;5;208m-[0m properties.privateEndpointVNetPolicies[0m:[0m [38;5;208m"Disabled"[0m
+    [38;5;208m-[0m tags.myTag[0m:[0m                             [38;5;208m"myValue"[0m
+[38;5;141m
+  ~ Microsoft.Storage/storageAccounts/stappb5plrxcdyi6my[0m [2023-05-01][38;5;141m[0m
+    [38;5;208m-[0m tags.myTag[0m:[0m [38;5;208m"myValue"[0m
+    [38;5;141m~[0m sku.name[0m:[0m   [38;5;208m"Standard_LRS"[0m => [38;5;77m"Standard_GRS"[0m
+[38;5;141m[0m
+Resource changes: 3 to modify.

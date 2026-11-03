@@ -1,0 +1,11 @@
+{
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "subscriptionName": "your test subscription",
+  "resourceGroup": "rg-demo-nic2026-stacks",
+  "location": "norwayeast",
+  "stackName": "stack-app",
+  "denySettingsMode": "DenyDelete",
+  "brownfieldResourceGroup": "rg-demo-nic2026-brownfield",
+  "brownfieldStackName": "stack-brownfield",
+  "tenantId": "00000000-0000-0000-0000-000000000000"
+}
